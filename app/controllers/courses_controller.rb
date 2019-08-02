@@ -1,7 +1,11 @@
 class CoursesController < ApplicationController
 
-def index
+  def index
 
-end
+  end
+
+  def new
+
+  end
 
 end
