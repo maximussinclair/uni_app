@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>UniApp</title>
+    <title>Mega Awesome Uni App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,10 +10,50 @@
   </head>
 
   <body>
-    <%= link_to 'Homepage', root_path %>
-    <%= link_to 'About Us', about_path %>
-    <%= link_to 'New Course', courses_new_path %>
-
-    <%= yield %>
+    <header>
+    <nav>
+      <div class="container nav-wrapper">
+        <a href="#" class="brand-logo right">Mega Awesome Uni App</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><%= link_to 'Courses', root_path %></li>
+          <li><%= link_to 'Enrolments', '#' %></li>
+          <li><%= link_to 'Account', '#' %></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </main>
+  <footer>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Footer Content</h5>
+            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2030 Copyright Max Sinclair.
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+    </footer>
+  </footer>
   </body>
+
 </html>
