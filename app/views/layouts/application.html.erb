@@ -10,66 +10,13 @@
   </head>
 
   <body>
-    <header>
-      <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#!">one</a></li>
-        <li><a href="#!">two</a></li>
-        <li class="divider"></li>
-        <li><a href="#!">three</a></li>
-      </ul>
-      <ul id="dropdown2" class="dropdown-content">
-        <li><a href="#!">one</a></li>
-        <li><a href="#!">two</a></li>
-        <li class="divider"></li>
-        <li><a href="#!">three</a></li>
-      </ul>
-    <nav>
-      <div class="container nav-wrapper">
-        <a href="#" class="brand-logo right">Mega Awesome Uni App</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-          <li><%= link_to 'Enrolments', '#' %></li>
-          <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
-        </ul>
-        <ul class="sidenav" id="mobile-demo">
-          <li><a href="Courses">Courses</a></li>
-          <li><a href="Enrolments">Enrolments</a></li>
-          <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Account<i class="material-icons right">arrow_drop_down</i></a></li>
-        </ul>
-
-      </div>
-    </nav>
-  </header>
+    <%= render "shared/navbar" %>
   <main>
     <div class="container">
       <%= yield %>
     </div>
   </main>
-  <footer>
-    <footer class="page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">Mega Awesome Uni App</h5>
-            <p class="grey-text text-lighten-4">Just a really mega awesome uni</p>
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Info</h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">Help</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <div class="container">
-        © 2030 Copyright Max Sinclair.
-        </div>
-      </div>
-    </footer>
-  </footer>
+     <%= render "shared/footer" %>
   </body>
 
 </html>
