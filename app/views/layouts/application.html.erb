@@ -10,13 +10,30 @@
   </head>
 
   <body>
-    <%= render "shared/navbar" %>
-  <main>
-    <div class="container">
-      <%= yield %>
-    </div>
-  </main>
+    <header>
+      <%= render "shared/navbar" %>
+      <% flash.each do |key, message| %>
+        <div class="container">
+          <div class="row sign-up-form">
+            <div class="col s12 m12 l12">
+              <div class="card-panel red darken-2" id="fade-out-target">
+                <span class="white-text">
+                  <%= message %>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </header>
+    <main>
+      <div class="container">
+        <%= yield %>
+      </div>
+    </main>
+    <footer>
      <%= render "shared/footer" %>
+   </footer>
   </body>
 
 </html>
