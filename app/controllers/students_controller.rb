@@ -27,7 +27,6 @@ class StudentsController < ApplicationController
   end
 
   def update
-    @student = Student.find(params[:id])
     if @student.update(student_params)
       flash[:notice] = "Your update was saved"
       redirect_to @student
@@ -43,7 +42,7 @@ class StudentsController < ApplicationController
   end
 
   def student_params
-    params.require(:student).permit(:name, :email)
+    params.require(:student).permit(:name, :email, :password, :password_confirmation)
   end
 
 end
